@@ -15,6 +15,8 @@ public class CabServiceMain {
         cabs.add(new CabInvoiceGenerator(4, 2));
 
         MultipleRides mulRides = new MultipleRides(cabs);
-        System.out.println("Aggregate total for 3 rides = " + mulRides.calculateAggregateTotal());
+        System.out.println("Aggregate total for " + mulRides.getNoOfRides() + " rides = " + mulRides.calculateAggregateTotal());
+
+        System.out.println("Average fare of ride: " + mulRides.calculateAvgFare());
     }
 }

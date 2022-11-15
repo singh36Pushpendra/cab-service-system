@@ -15,4 +15,12 @@ public class MultipleRides {
                 .map(cabService -> cabService.calculateFare())
                 .reduce(0.0, (aggregateFare, fare) -> aggregateFare + fare);
     }
+
+    public int getNoOfRides() {
+        return generators.size();
+    }
+
+    public double calculateAvgFare() {
+        return calculateAggregateTotal() / getNoOfRides();
+    }
 }
